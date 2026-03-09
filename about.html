@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プロフィール | VERTEX DIGITAL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    /* Profile card styles */
+    .profile-card {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 3rem;
+      align-items: start;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 3rem;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .profile-avatar {
+      aspect-ratio: 1;
+      border-radius: var(--radius-lg);
+      background: var(--bg-warm);
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      color: var(--text-muted);
+    }
+
+    .profile-avatar .avatar-initials {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: -0.04em;
+    }
+
+    .profile-avatar .avatar-hint {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    .profile-info { display: flex; flex-direction: column; gap: 0; }
+
+    .profile-info .name {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+      margin-bottom: 0.25rem;
+    }
+
+    .profile-info .role {
+      font-size: 0.82rem;
+      color: var(--blue);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      margin-bottom: 1.5rem;
+    }
+
+    .profile-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .profile-table th,
+    .profile-table td {
+      padding: 0.75rem 0;
+      text-align: left;
+      font-size: 0.88rem;
+      border-bottom: 1px solid var(--border-light);
+      vertical-align: top;
+    }
+
+    .profile-table th {
+      width: 90px;
+      color: var(--text-muted);
+      font-weight: 500;
+      flex-shrink: 0;
+    }
+
+    .profile-table td { color: var(--text); }
+
+    .profile-table tr:last-child th,
+    .profile-table tr:last-child td { border-bottom: none; }
+
+    @media (max-width: 640px) {
+      .profile-card {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem;
+      }
+
+      .profile-avatar { height: 120px; flex-direction: row; gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">VERTEX <span>DIGITAL</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="services.html">サービス</a></li>
+          <li><a href="works.html">実績</a></li>
+          <li><a href="pricing.html">料金</a></li>
+          <li><a href="about.html">プロフィール</a></li>
+          <li><a href="contact.html" class="nav-cta">お問い合わせ</a></li>
+        </ul>
+        <div class="hamburger"><span></span><span></span><span></span></div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <div class="container">
+      <div class="breadcrumb reveal"><a href="index.html">ホーム</a><span class="sep">/</span><span>プロフィール</span></div>
+      <h1 class="reveal">プロフィール</h1>
+      <p class="reveal">テクノロジーとクリエイティビティで、お客様のビジネスを前進させます。</p>
+    </div>
+  </section>
+
+  <!-- Mission -->
+  <section class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="reveal">
+          <span class="section-label">About Me</span>
+          <h2 class="section-title">ひとりの制作者が、<br>本気で向き合う</h2>
+          <p class="section-desc" style="margin-bottom:1.5rem;">
+            VERTEX DIGITALは、Web制作を専門とする個人のフリーランスです。「技術力とデザインの両立で、お客様のビジネスに本当に役立つWebを届ける」という想いを軸に活動しています。
+          </p>
+          <p class="section-desc">
+            大手制作会社のような「担当者が変わる」「伝言ゲームになる」といった問題は起きません。ヒアリングから納品・運用まで、一貫して私ひとりが責任を持って対応します。だからこそ、スピーディーで細かいコミュニケーションが可能です。
+          </p>
+        </div>
+        <div class="about-visual reveal">
+          <div class="about-visual-box"></div>
+          <div class="about-visual-content">
+            <div class="big-text">VD</div>
+            <p style="color:var(--text-muted);font-size:0.85rem;text-align:center;">VERTEX DIGITAL</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Profile Info -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="reveal" style="text-align:center;margin-bottom:3rem;">
+        <span class="section-label">Profile</span>
+        <h2 class="section-title" style="margin-inline:auto;">プロフィール情報</h2>
+      </div>
+      <div class="profile-card reveal">
+        <div class="profile-avatar">
+          <div class="avatar-initials">○○</div>
+          <div class="avatar-hint">写真を<br>差し替え可</div>
+        </div>
+        <div class="profile-info">
+          <div class="name">○○ ○○</div>
+          <div class="role">Web Designer &amp; Developer</div>
+          <table class="profile-table">
+            <tr>
+              <th>氏名</th>
+              <td>○○ ○○（○○ ○○）</td>
+            </tr>
+            <tr>
+              <th>所在地</th>
+              <td>○○県</td>
+            </tr>
+            <tr>
+              <th>連絡先</th>
+              <td>info@vertex-digital.jp</td>
+            </tr>
+            <tr>
+              <th>対応業務</th>
+              <td>
+                Webサイト・LPの企画・設計・制作<br>
+                Webアプリケーション開発<br>
+                UI/UXデザイン<br>
+                デジタルマーケティング支援
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="section">
+    <div class="container">
+      <div class="reveal" style="text-align:center;margin-bottom:3rem;">
+        <span class="section-label">My Values</span>
+        <h2 class="section-title" style="margin-inline:auto;">大切にしていること</h2>
+      </div>
+      <div class="grid-3 stagger-children">
+        <div class="card tilt-card" style="text-align:center;padding:2.5rem;">
+          <div style="margin-bottom:1rem;color:var(--blue);"><i data-lucide="gem" style="width:36px;height:36px;"></i></div>
+          <div class="card-title" style="font-size:1.15rem;">Quality First</div>
+          <div class="card-text">妥協のないクオリティを追求します。細部にまでこだわり、お客様の期待を超えるプロダクトをお届けします。</div>
+        </div>
+        <div class="card tilt-card" style="text-align:center;padding:2.5rem;">
+          <div style="margin-bottom:1rem;color:var(--blue);"><i data-lucide="handshake" style="width:36px;height:36px;"></i></div>
+          <div class="card-title" style="font-size:1.15rem;">Partnership</div>
+          <div class="card-text">お客様と同じ方向を向くパートナーとして。課題解決に共に取り組み、長期的な信頼関係を大切にします。</div>
+        </div>
+        <div class="card tilt-card" style="text-align:center;padding:2.5rem;">
+          <div style="margin-bottom:1rem;color:var(--blue);"><i data-lucide="rocket" style="width:36px;height:36px;"></i></div>
+          <div class="card-title" style="font-size:1.15rem;">Innovation</div>
+          <div class="card-text">最新技術を積極的に取り入れ、常に最適なソリューションを模索。変化を恐れず、革新的なアプローチで挑戦します。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container reveal">
+      <h2>まずはお気軽にご連絡ください</h2>
+      <p>ご相談・お見積もりは無料です。</p>
+      <a href="contact.html" class="btn btn-primary btn-arrow"><span class="btn-text">お問い合わせはこちら</span></a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="index.html" class="logo">VERTEX <span>DIGITAL</span></a><p>戦略設計からデザイン、開発、運用まで。ビジネスの成長を加速するデジタルパートナー。</p></div>
+        <div class="footer-col"><h4>サービス</h4><ul><li><a href="services.html">LP制作</a></li><li><a href="services.html">コーポレートサイト制作</a></li><li><a href="services.html">Webアプリ開発</a></li><li><a href="services.html#design">デザイン制作</a></li><li><a href="services.html#aeo">AEO最適化</a></li></ul></div>
+        <div class="footer-col"><h4>情報</h4><ul><li><a href="about.html">プロフィール</a></li><li><a href="works.html">制作実績</a></li><li><a href="pricing.html">料金プラン</a></li></ul></div>
+        <div class="footer-col"><h4>お問い合わせ</h4><ul><li><a href="contact.html">お問い合わせフォーム</a></li><li><a href="mailto:info@vertex-digital.jp">info@vertex-digital.jp</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 VERTEX DIGITAL. All rights reserved.</p>
+        <p><a href="#">プライバシーポリシー</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>lucide.createIcons();</script>
+  <script src="js/main.js"></script>
+</body>
+</html>
